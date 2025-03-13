@@ -1,0 +1,43 @@
+### Principal
+http://localhost:5073
+
+### Criacao de um novo funcionario
+POST http://localhost:5073/funcionario/cadastrar
+# Content-Type: application/json
+
+# {
+#     "Nome": "JESUS CRISTO",
+#     "CPF": "77777777777"
+# }
+
+### Listar Funcionarios
+GET http://localhost:5073/funcionario/listar
+
+### Editar Funcionar
+PUT http://localhost:5073/funcionario/editar
+
+### Deletar Funcionario
+DELETE http://localhost:5073/funcionario/remover
+### Cadastrar Folha
+POST http://localhost:5073/folha/cadastrar
+# Content-Type: application/json
+
+# {
+#     "valor": 77,
+#     "quantidade": 333,
+#     "mes": 12,
+#     "ano": 0,
+#     "funcionarioId": 2
+# }
+
+### Listar Folhas
+GET http://localhost:5073/folha/listar
+
+### Editar Folha
+PUT http://localhost:5073/folha/editar
+
+### Remover Folha
+DELETE http://localhost:5073/folha/remover/
+
+### Buscar Folhas
+GET http://localhost:5073/folha/buscar/12345678910/10/2024
