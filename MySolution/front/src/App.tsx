@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Home from './components/Home';
+import Funcionario from './components/Funcionario';
+import Folha from './components/Folhas';
+import { BrowserRouter, Routes, Link, Route} from "react-router-dom"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h1> My aplication WEBBBB </h1>
+        <BrowserRouter>
+          <ul>
+            <li><Link to="/"> Pagina Inicial </Link></li>
+            <li><Link to="/funcionario/cadastrar"> Cadastro de Funcionario </Link></li>
+            <li><Link to="/folha/cadastrar"> Folha dos Funcionarios </Link></li>
+          </ul>
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/funcionario/cadastrar" element={<Funcionario />}/>
+            <Route path="/folha/cadastrar" element={<Folha />}/>
+          </Routes>
+        </BrowserRouter>
     </div>
   );
 }
